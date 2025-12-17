@@ -1,0 +1,18 @@
+for i in (1, 2):
+    pass
+else:
+    print("1. for loop executed successfully")
+for i in (1, 2):
+    try:
+        raise ValueError
+    except ValueError as ve:
+        pass
+else:
+    print("2. for loop executed successfully")
+try:
+    for i in (1, 2):
+        raise ValueError
+    else:
+        print("3. for loop executed successfully")
+except ValueError as ve:
+    print ("4. ValueError Raised.")
